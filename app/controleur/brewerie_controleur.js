@@ -22,7 +22,7 @@ module.exports = {
                         }).catch(e => {console.log('unable to insert : '+e)}))
                 .on('end', rowCount => resolve({message : 'parsed done'}));
         });
-        return h.response(await promise).code(200);
+        return h.status(200).send(result);
     },
     getAll: async (request,h) => {
         const result = await Models.Brewery.findAll();
