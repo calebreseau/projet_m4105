@@ -2,10 +2,10 @@
 const fs = require('fs');
 const csv = require('fast-csv');
 
-const Model = require("../model");
+const Model = require("../model/db_init");
 const {Op} = require("sequelize");
 const beerFileName = require('../config/config').beerFileName;
-const Beer = require('../model').Beer;
+const Beer = require('../model/db_init').Beer;
 
 module.exports = {
     populateBeers:  async (request,h) => {
@@ -33,17 +33,17 @@ module.exports = {
     },
     getAll: async (request,h) => {
         const result = await Model.Beer.findAll();
-        return h.response(result).code(200);
+        return h.status(200).send(result);
     },
     getBeerById : async (request, h) => {
         const result = await Model.Beer.findAll({
             where: {id: request.params.id}
         })
-        return h.response(result).code(200)
+        return h.status(200).send(result);
     },
     getBeerByName : async (request, h) => {
         const result = await Model.Beer.findAll({where: {name: request.params.name}})
-        return h.response(result).code(200)
+        return h.status(200).send(result);
     },
     getBeerByCategory : async (request, h) => {
         const result = await Model.Beer.findAll({where: {category: request.params.category}})

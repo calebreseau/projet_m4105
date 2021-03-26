@@ -2,9 +2,9 @@
 const fs = require('fs');
 const csv = require('fast-csv');
 
-const Models = require("../model");
+const Models = require("../model/db_init");
 const brewerieFileName = require('../config/config').brewerieFileName;
-const Brewery = require('../model').Brewery;
+const Brewery = require('../model/db_init').Brewery;
 
 module.exports = {
     populateBreweries:  async (request,h) => {
@@ -26,6 +26,6 @@ module.exports = {
     },
     getAll: async (request,h) => {
         const result = await Models.Brewery.findAll();
-        return h.response(result).code(200);
+        return h.status(200).send(result);
     }
 }
