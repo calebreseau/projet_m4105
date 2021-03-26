@@ -18,13 +18,13 @@ module.exports = {
                         await Beer.create({
                             id :row.id,
                             brewery_id : row.brewery_id,
+                            brewery : row.Brewer,
                             name: row.name,
-                            alcohol_By_Volume: row.Alcohol_By_Volume,
+                            alcohol_By_Volume: row.alcohol_By_Volume,
                             style : row.Style,
                             category : row.Category,
                             city : row.City,
                             country: row.Country
-
                         }).catch(e => {console.log('unable to insert : '+e)}))
                 .on('end', rowCount => resolve({message : 'parsing done'}));
         });

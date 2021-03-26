@@ -4,10 +4,11 @@ var app=express();
 var beer_controller = require('./app/controller/beer_controller.js');
 var brewery_controller = require('./app/controller/brewery_controller.js');
 var db_init = require('./app/model/db_init.js');
-const beers = require('./open-beer-database.json');
+var test = require('./test.js');
 
 app.use(express.json())
 app.set('json spaces', 40); //pour rendre la sortie visible durant la conception
+
 
 
 app.get('/',function(req,res){
@@ -74,5 +75,15 @@ app.get('/api/breweries/',function(req,res){
     brewery_controller.getAll(req,res);
 
 });
+
+app.get('/api/test/',function(req,res){
+
+    test.test(req,res);
+
+});
+app.use(function (req, res, next) {
+    res.status(404).send("[{'error': '404: page inconnue'}]")
+  });
+
 
 var server=app.listen(3000,function() {});

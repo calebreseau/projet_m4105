@@ -9,14 +9,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
 
         },
+        brewery: {
+            type: DataTypes.STRING,
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
-
         },
         alcohol_By_Volume: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
+            type: DataTypes.DOUBLE,
+            allowNull: false,
         },
         style: {
             type: DataTypes.STRING,

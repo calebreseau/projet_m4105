@@ -1,4 +1,4 @@
-id;brewery_id;name;cat_id;style_id;Alcohol By Volume;International Bitterness Units;Standard Reference Method;Universal Product Code;filepath;Description;add_user;last_mod;Style;Category;Brewer;Address1;Address2;Code;City;State;Country;Website;Coordinates
+id;brewery_id;name;cat_id;style_id;alcohol_By_Volume;International Bitterness Units;Standard Reference Method;Universal Product Code;filepath;Description;add_user;last_mod;Style;Category;Brewer;Address1;Address2;Code;City;State;Country;Website;Coordinates
 6;1385;Winter Warmer;1;13;5.1999998093;0;0;0;;;0;2010-07-22T21:00:00+01:00;Old Ale;British Ale;Youngs & Company Brewery;26 Osiers Road;Wandsworth;SW18 1NH;London;;England;http://www.youngs.co.uk;51.4611,-0.1966
 47;901;Cardinal Pale Ale;3;26;0.0;0;0;0;;;0;2010-07-22T21:00:00+01:00;American-Style Pale Ale;North American Ale;Nebraska Brewing Company;7474 Towne Center Parkway #101;;68046;Papillion;Nebraska;United States;;41.1339,-96.0307
 51;432;Saison Imperiale;-1;-1;8.5;0;0;0;;;0;2010-07-22T21:00:00+01:00;;;De Proef Brouwerij;Doornzelestraat 20;;;Lochristi-Hijfte;Oost-Vlaanderen;Belgium;;51.1159,3.8158
