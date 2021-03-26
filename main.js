@@ -1,13 +1,13 @@
 var express=require('express');
 var app=express();
 
-var beer_controller = require('./app/controleur/beer_controleur.js');
-var brewery_controller = require('./app/controleur/brewerie_controleur.js');
+var beer_controller = require('./app/controller/beer_controller.js');
+var brewery_controller = require('./app/controller/brewery_controller.js');
 var db_init = require('./app/model/db_init.js');
 const beers = require('./open-beer-database.json');
 
 app.use(express.json())
-app.set('json spaces', 40);
+app.set('json spaces', 40); //pour rendre la sortie visible durant la conception
 
 
 app.get('/',function(req,res){
