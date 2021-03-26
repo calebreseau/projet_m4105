@@ -47,14 +47,14 @@ module.exports = {
     },
     getBeerByCategory : async (request, h) => {
         const result = await Model.Beer.findAll({where: {category: request.params.category}})
-        return h.response(result).code(200)
+        return h.status(200).send(result);
     },
     getByCity : async (request, h) => {
         const result = await Model.Beer.findAll({attributes: ['id'],where: {city: request.params.city}})
-        return h.response(result).code(200)
+        return h.status(200).send(result);
     },
     getByCountry : async (request, h) => {
         const result = await Model.Beer.findAll({where: {country: request.params.country}})
-        return h.response(result).code(200)
+        return h.status(200).send(result);
     }
 }
